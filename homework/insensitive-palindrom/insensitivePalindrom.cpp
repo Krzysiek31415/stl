@@ -6,15 +6,17 @@
 std::string& sentenceToLower(std::string& str)
 {
     for(auto & s: str)
+    {
         s = std::tolower(s);
+    }
     return str;
 }
 
 std::string& onlyAlphanumeric(std::string& str)
 {
     std::string alphanum;
-    std::for_each(str.begin(), str.end(), 
-                [&alphanum](auto & s){ if( std::isalnum(s)) alphanum.push_back(s);});
+    std::copy_if(str.begin(), str.end(), alphanum.begin(),
+                [](auto & s){ return std::isalnum(s); });
     str = alphanum;
     return str;
 }

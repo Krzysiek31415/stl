@@ -21,5 +21,13 @@ int main() {
     removeVowels(words);
     printVector(words);
 
+    std::vector<std::string> vec{
+        {"A"}, {"E"}, {"I"}, {"O"}, {"U"}, {"Y"}, {"AEIOUY"}};
+
+    printVector(vec);
+    removeVowels(vec);
+    printVector(vec);
+
+
     return 0;
 }

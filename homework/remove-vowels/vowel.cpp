@@ -6,7 +6,7 @@
 bool isVowel(char ch)
 {
     // Make the list of vowels
-    std::string str = "aeiouAEIOU";
+    std::string str = "aeiouAEIOUYy";
     return (str.find(ch) != std::string::npos);
 }
 
